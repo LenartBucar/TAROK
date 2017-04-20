@@ -1,4 +1,5 @@
 #Simulator deljenja tarok kart
+#Ugotovi odstotek nelegalnih razdelitev kart v izbranem stevilu partij
 #Gregor Gajič, 2017
 
 import random
