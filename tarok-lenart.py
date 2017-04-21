@@ -1,7 +1,9 @@
 import random
 import argparse
+import time
 from tqdm import trange
 
+start=time.time()
 
 def divide_cards(deck):
     return [deck[n*12:(n+1)*12] for n in range(4)]
@@ -13,7 +15,7 @@ def check_legal(players):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('cycles', help='How much cycles to do?', type=int)
+    parser.add_argument('cycles', help='How many cycles to do? ', type=int)
     args = parser.parse_args()
     valid = 0
     n = 54
@@ -28,6 +30,7 @@ def main():
     print("\n\nKONEC")
     print("Legalnih je bilo {}% rok.".format((valid*100/args.cycles)))
     print("Nelegalnih je bilo {}% rok.".format((args.cycles-valid)*100/args.cycles))
+    print("Porabljen cas: " + str((time.time() - start)))
 
 if __name__ == '__main__':
     main()
