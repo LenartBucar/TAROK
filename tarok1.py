@@ -1,6 +1,12 @@
 # Simulator deljenja tarok kart
 # Ugotovi odstotek nelegalnih razdelitev kart v izbranem stevilu partij
 # Gregor Gajič, 2017
+#
+# Primer izpisa:
+# KONEC
+# Legalnih je bilo 99.7316 odstotkov rok.
+# Nelegalnih je bilo -98.7316 odstotkov rok.
+# Porabljen cas: 114.3401038646698
 
 import random
 import time
