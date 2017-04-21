@@ -70,7 +70,6 @@ for i in range(1,n+1):
         legalne += 1
 
 print("\n\nKONEC")
-print("Legalnih je bilo "+str((legalne*100/n))+" rok.")
-print("Nelegalnih je bilo "+str((100-(legalne*100/n)))+" rok.")
-
-print(time.time() - start)
+print("Legalnih je bilo "+str((legalne*100/n))+" odstotkov rok.")
+print("Nelegalnih je bilo "+str((n-legalne*100)/n)+" odstotkov rok.")
+print("Porabljen cas: "+str((time.time() - start)))
