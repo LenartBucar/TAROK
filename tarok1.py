@@ -3,10 +3,13 @@
 #Gregor Gajič, 2017
 
 import random
+import time
 
 legalne = 0
 
 n = int(input("Koliko partij taroka naj razdelim? "))
+
+start = time.time()
 
 for i in range(1,n+1):
     tarok = list(range(1, 55)) #naj bojo 1-22 taroki ;)
@@ -21,13 +24,13 @@ for i in range(1,n+1):
         print("Trenutno je bilo legalnih "+str((legalne*100/i))+" odstotkov rok.")
         print("Nelegalnih je bilo "+str((100-(legalne*100/i)))+" odstotkov rok.")
 
-    for e in range(0,6):
+    for e in range(0,6): #talon
         #karta = random.choice(tarok)
         #talon.append(karta)
         #tarok.remove(karta)
         tarok.remove(random.choice(tarok))
 
-    for e in range(0,2):
+    for e in range(0,2): #players
         for igralec in range(0,6):
             karta = random.choice(tarok)
             igralec1.append(karta)
@@ -69,3 +72,5 @@ for i in range(1,n+1):
 print("\n\nKONEC")
 print("Legalnih je bilo "+str((legalne*100/n))+" rok.")
 print("Nelegalnih je bilo "+str((100-(legalne*100/n)))+" rok.")
+
+print(time.time() - start)
